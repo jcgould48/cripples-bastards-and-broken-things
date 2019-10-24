@@ -13,7 +13,7 @@ function repeat(str, repetitions) {
   
   let count = 1;
   while (count <= repetitions) {
-    repeated + str;
+    repeated += str;
     count++;
   }
   
@@ -21,7 +21,7 @@ function repeat(str, repetitions) {
 }
 
 function startsWith(string, substring) {
-  for (let i = 0; i < string.length; i++) {
+  for (let i = 0; i < substring.length; i++) {
     if (string[i] !== substring[i]) {
       return false;
     }
@@ -30,7 +30,7 @@ function startsWith(string, substring) {
   return true;
 }
 
-function endsWith(str) {
+function endsWith(str, substring) {
   for (let i = 0; i <= substring.length; i++) {
     const substringIndex = substring.length - i;
     const strIndex = str.length - i;
@@ -44,7 +44,7 @@ function endsWith(str) {
 
 function includes(arr, item) {
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] !== item) {
+    if (arr[i] === item) {
       return true;
     }
   }
@@ -57,6 +57,7 @@ function join(arr, separator = '') {
   for (let i = 1; i < arr.length; i++) {
     str += separator + arr[i];
   }
+  return str;
 }
 
 
